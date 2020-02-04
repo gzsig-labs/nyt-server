@@ -25,7 +25,7 @@ const SearchResultController = (request, response) => {
               };
             });
       })
-      .then( (news) => response.render(`index`, {news, query: q}) );
+      .then( (news) => response.status(200).json(news) );
 };
 
 module.exports = {

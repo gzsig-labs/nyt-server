@@ -24,7 +24,7 @@ const TrendingByEmailController = (request, response) => {
           news,
           title: 'Mais compartilhadas por e-mail',
         };
-        response.render(`index`, templateData);
+        response.status(200).json(news);
       });
 };
 

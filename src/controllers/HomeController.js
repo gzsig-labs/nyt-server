@@ -19,7 +19,7 @@ const HomeController = (request, response) => {
               };
             });
       })
-      .then( (news) => response.render(`index`, {news}) );
+      .then( (news) => response.status(200).json(news) );
 };
 
 module.exports = {
